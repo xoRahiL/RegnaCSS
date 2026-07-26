@@ -2,338 +2,354 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Fevicon -->
-    <link rel="icon" type="img/x-icon" href="r-solid(1).svg">
-    <title>REGNA</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REGNA — Web & App Design Studio</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/r-solid.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="logo">REGNA</div>
-        <div class="menu">
-            <ul>
-                <li class="underline"><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">TEAM</a></li>
-                <li><a href="#">DROP DOWN</a>
-                    <ul>
-                        <li><a href="#">DROP DOWN 1</a></li>
-                        <li><a href="#">DEEP DROP DOWN</a>
-                            <ul>
-                                <li><a href="#">DEEP DROP DOWN 1</a></li>
-                                <li><a href="#">DEEP DROP DOWN 2</a></li>
-                                <li><a href="#">DEEP DROP DOWN 3</a></li>
-                                <li><a href="#">DEEP DROP DOWN 4</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">DROP DOWN 2</a></li>
-                        <li><a href="#">DROP DOWN 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
+
+  <header class="navbar">
+    <div class="logo">REGNA</div>
+    <nav class="menu">
+      <ul>
+        <li class="active"><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li>
+          <a href="#">DROP DOWN</a>
+          <ul>
+            <li><a href="#">DROP DOWN 1</a></li>
+            <li>
+              <a href="#">DEEP DROP DOWN</a>
+              <ul>
+                <li><a href="#">DEEP DROP DOWN 1</a></li>
+                <li><a href="#">DEEP DROP DOWN 2</a></li>
+                <li><a href="#">DEEP DROP DOWN 3</a></li>
+                <li><a href="#">DEEP DROP DOWN 4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">DROP DOWN 2</a></li>
+            <li><a href="#">DROP DOWN 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <div class="hero-content reveal">
+        <h1>WELCOME TO REGNA</h1>
+        <p>We are a team of talented designers making websites with CSS</p>
+        <button class="btn-outline" id="getstarted">GET STARTED</button>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-text reveal">
+          <h1>Few Words About Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          <div class="feature-list reveal-stagger">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-bag-shopping fa-2xl"></i></div>
+              <div class="feature-body">
+                <h3>EIUSMOD TEMPOR</h3>
+                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                  soluta nobis est eligendi</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-list fa-2xl"></i></div>
+              <div class="feature-body">
+                <h3>MAGNI DOLORES</h3>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-brands fa-periscope fa-2xl"></i></div>
+              <div class="feature-body">
+                <h3>DOLOR SITEMA</h3>
+                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat tarad limino ata</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="back">
-        <div class="welcome">
-            <h1>WELCOME TO REGNA</h1>
-            <p>We are team of talented designers making websites with CSS</p>
-            <button id="getstarted">GET STARTED</button>
+
+        <div class="about-image reveal">
+          <img src="assets/dark-bg.webp" alt="Studio workspace">
         </div>
-    </div>
-    <div class="aboutus">
-        <div class="aboutus1">
-            <div class="text">
-                <div class="text1">
-                    <h1>Few Words About Us</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                <div class="text2">
-                    <div class="li1">
-                        <div class="icon1"> <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #ffffff;"></i>
-                        </div>
-                        <div class="desc">
-                            <h3 style="display: inline;">EIUSMOD TEMPOR</h3>
-                            <div class="descrip">
-                                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
-                                    soluta
-                                    nobis est eligendi</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="li1">
-                        <div class="icon1"> <i class="fa-solid fa-list fa-2xl" style="color: #ffffff;"></i>
-                        </div>
-                        <div class="desc">
-                            <h3 style="display: inline;">MAGNI DOLORES</h3>
-                            <div class="descrip">
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="li1">
-                        <div class="icon1"> <i class="fa-brands fa-periscope fa-2xl" style="color: #ffffff;"></i></i>
-                        </div>
-                        <div class="desc">
-                            <h3 style="display: inline;">DOLOR SITEMA</h3>
-                            <div class="descrip">
-                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat tarad limino ata</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </section>
+
+    <section class="facts">
+      <div class="container">
+        <h1 class="section-title reveal">FACTS</h1>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque</p>
+
+        <div class="facts-grid reveal-stagger">
+          <div class="fact-item">
+            <div class="fact-number">232</div>
+            <div class="fact-label">Clients</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-number">534</div>
+            <div class="fact-label">Projects</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-number">1463</div>
+            <div class="fact-label">Hours Of Support</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-number">42</div>
+            <div class="fact-label">Hard Workers</div>
+          </div>
         </div>
-        <div class="aboutus2">
-            <img src="darkBG.webp" alt="" width="100%" height="600px">
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h1 class="section-title reveal">SERVICES</h1>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque</p>
+
+        <div class="services-grid reveal-stagger">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-bag-shopping fa-2xl"></i></div>
+            <h4>LOREM IPSUM</h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-list fa-2xl"></i></div>
+            <h4>DOLOR SITEMA</h4>
+            <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+              tarad limino ata</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-chart-simple fa-2xl"></i></div>
+            <h4>SED UT PERSPICIATIS</h4>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-brands fa-periscope fa-2xl"></i></div>
+            <h4>MAGNI DOLORES</h4>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+              est laborum</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-regular fa-sun fa-2xl"></i></div>
+            <h4>NEMO ENIM</h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+              voluptatum deleniti atque</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-calendar-days fa-2xl"></i></div>
+            <h4>EIUSMOD TEMPOR</h4>
+            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+              est eligendi</p>
+          </div>
         </div>
-    </div>
-    <div class="facts">
-        <h1>FACTS</h1>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        <div class="cont">
-            <div class="stat1" style="display: block;">232</div>
-            <div class="detail">Clients</div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-text reveal">
+          <h2>Call To Action</h2>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
         </div>
-        <div class="cont">
-            <div class="stat1" style="display: block;">534</div>
-            <div class="detail">Projects</div>
+        <div class="cta-actions reveal">
+          <button class="btn-outline" id="c2a">CALL TO ACTION</button>
         </div>
-        <div class="cont">
-            <div class="stat1" style="display: block;">1463</div>
-            <div class="detail">Hours Of Support</div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h1 class="section-title reveal">PORTFOLIO</h1>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque</p>
+
+        <div class="tabs reveal">
+          <button class="tab-btn active">All</button>
+          <button class="tab-btn">App</button>
+          <button class="tab-btn">Card</button>
+          <button class="tab-btn">Web</button>
         </div>
-        <div class="cont">
-            <div class="stat1" style="display: block;">42</div>
-            <div class="detail">Hard Workers</div>
+
+        <div class="product-grid reveal-stagger">
+          <img src="assets/portfolio-img/portfolio-1.jpg" alt="Portfolio project 1">
+          <img src="assets/portfolio-img/portfolio-2.jpg" alt="Portfolio project 2">
+          <img src="assets/portfolio-img/portfolio-3.jpg" alt="Portfolio project 3">
+          <img src="assets/portfolio-img/portfolio-4.jpg" alt="Portfolio project 4">
+          <img src="assets/portfolio-img/portfolio-5.jpg" alt="Portfolio project 5">
+          <img src="assets/portfolio-img/portfolio-6.jpg" alt="Portfolio project 6">
+          <img src="assets/portfolio-img/portfolio-7.jpg" alt="Portfolio project 7">
+          <img src="assets/portfolio-img/portfolio-8.jpg" alt="Portfolio project 8">
+          <img src="assets/portfolio-img/portfolio-9.jpg" alt="Portfolio project 9">
         </div>
-    </div>
-    <div class="services">
-        <h1 style="text-align: center;">SERVICES</h1>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        <div class="boxes">
-            <div class="box">
-                <div class="icon2"> <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <h4>LOREM IPSUM</h4>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
-                    non provident</p>
+      </div>
+    </section>
+
+    <section id="team" class="team">
+      <div class="container">
+        <h1 class="section-title reveal">TEAM</h1>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque</p>
+
+        <div class="team-grid reveal-stagger">
+          <div class="team-member">
+            <img src="assets/team-img/team-1.jpg" alt="Walter White">
+            <h3>Walter White</h3>
+            <p class="role">Chief Executive Officer</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <div class="box">
-                <div class="icon2"> <i class="fa-solid fa-list fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <h4>DOLOR SITEMA</h4>
-                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad
-                    limino ata</p>
+          </div>
+          <div class="team-member">
+            <img src="assets/team-img/team-2.jpg" alt="Sarah Jhinson">
+            <h3>Sarah Jhinson</h3>
+            <p class="role">Product Manager</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <div class="box">
-                <div class="icon2"><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <h4>SED UT PERSPICIATIS</h4>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
+          </div>
+          <div class="team-member">
+            <img src="assets/team-img/team-3.jpg" alt="William Anderson">
+            <h3>William Anderson</h3>
+            <p class="role">CTO</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <div class="box">
-                <div class="icon2"> <i class="fa-brands fa-periscope fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <h4>MAGNI DOLORES</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum</p>
+          </div>
+          <div class="team-member">
+            <img src="assets/team-img/team-4.jpg" alt="Amanda Jepson">
+            <h3>Amanda Jepson</h3>
+            <p class="role">Accountant</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <div class="box">
-                <div class="icon2"><i class="fa-regular fa-sun fa-2xl" style="color: #ffffff;"></i></div>
-                <h4>NEMO ENIM</h4>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti atque</p>
-            </div>
-            <div class="box">
-                <div class="icon2"><i class="fa-solid fa-calendar-days fa-2xl" style="color: #ffffff;"></i></div>
-                <h4>EIUSMOD TEMPOR</h4>
-                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
-                    eligendi</p>
-            </div>
+          </div>
         </div>
-    </div>
-    <div class="call">
-        <div class="actionContent">
-            <div class="action1">
-                <h2>Call To Action</h2>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est
-                    laborum.</p>
-            </div>
-            <div class="action2">
-                <button id="c2a">CALL TO ACTION</button>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio">
-        <h1>PORTFOLIO</h1>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        <div class="tabs">
-            <button id="tab">All</button>
-            <button id="tab">App</button>
-            <button id="tab">Card</button>
-            <button id="tab">Web</button>
-        </div>
-        <div class="product">
-            <div class="product1">
-                <img src="portfolio-1.jpg" alt="">
-            </div>
-            <div class="product1">
-                <img src="portfolio-2.jpg" alt="">
-            </div>
-            <div class="product1">
-                <img src="portfolio-3.jpg" alt="">
-            </div>
-            <div class="product1">
-                <img src="portfolio-4.jpg" alt="">
-            </div>
-            <div class="product1">
-                <img src="portfolio-5.jpg" alt="">
-            </div>
-            <div class="product1">
-                <img src="portfolio-6.jpg" alt="">
-            </div>
-            <div class="product1">
-                <img src="portfolio-7.jpg" alt="">
-            </div>
-            <div class="product1">
-                <img src="portfolio-8.jpg" alt="">
-            </div>
-            <div class="product1">
-                <img src="portfolio-9.jpg" alt="">
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="team">
-        <h1>
-            <center>TEAM</center>
-        </h1>
-        <p>
-            <center>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</center>
-        </p>
-        <div class="team1">
-            <div>
-                <img src="team-1.jpg" alt="">
-                <h3>Walter White</h3>
-                <p>Chief Executive Officer</p>
-                <div class="socialmedia">
-                    <a href="#"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
-                </div>
-            </div>
-            <div>
-                <img src="team-2.jpg" alt="">
-                <h3>Sarah Jhinson</h3>
-                <p>Product Manager</p>
-                <div class="socialmedia">
-                    <a href="#"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
-                </div>
-            </div>
-            <div>
-                <img src="team-3.jpg" alt="">
-                <h3>William Anderson</h3>
-                <p>CTO</p>
-                <div class="socialmedia">
-                    <a href="#"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
-                </div>
-            </div>
-            <div>
-                <img src="team-4.jpg" alt="">
-                <h3>Amanda Jepson</h3>
-                <p>Accountant</p>
-                <div class="socialmedia">
-                    <a href="#"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="contact">
-        <h1>CONTACT</h1>
-        <p style="padding-bottom: 40px;">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h1 class="section-title reveal">CONTACT</h1>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque</p>
+
         <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7343.252608419661!2d72.50573530135537!3d23.03748934331664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b4922484c6f%3A0xe077cfffcd90ee87!2sTop%20App%20%26%20Web%20Development%20company%20in%20ahmedabad.%20Summer%20internship%20in%20Php%2CFlutter%2CPython%2CAngularJS%2CReact%20JS%2CNode%20JS%20%2C%20UI%2FUx!5e0!3m2!1sen!2sin!4v1699514576957!5m2!1sen!2sin"
-                width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7343.252608419661!2d72.50573530135537!3d23.03748934331664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b4922484c6f%3A0xe077cfffcd90ee87!2sTop%20App%20%26%20Web%20Development%20company%20in%20ahmedabad.%20Summer%20internship%20in%20Php%2CFlutter%2CPython%2CAngularJS%2CReact%20JS%2CNode%20JS%20%2C%20UI%2FUx!5e0!3m2!1sen!2sin!4v1699514576957!5m2!1sen!2sin"
+            width="100%" height="380" style="border:0;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="REGNA studio location"></iframe>
         </div>
-        <div class="container">
-            <div class="details">
-                <div class="info">
-                    <p>
-                        <i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i>
-                        A108 Adam Street
-                        New York, NY 535022
-                    </p>
-                    <br>
-                    <p>
-                        <i class="fa-regular fa-envelope fa-2xl" style="color: #ffffff;"></i>
-                        info@example.com
-                    </p>
-                    <br>
-                    <p>
-                        <i class="fa-solid fa-mobile-button fa-2xl" style="color: #fafcff;"></i>
-                        +1 5589 55488 55s
-                    </p>
-                </div>
-                <div class="socialmedia">
-                    <a href="#"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
-                </div>
+
+        <div class="contact-grid">
+          <div class="contact-details reveal">
+            <div class="info">
+              <p><i class="fa-solid fa-location-dot fa-xl"></i> A108 Adam Street, New York, NY 535022</p>
+              <p><i class="fa-regular fa-envelope fa-xl"></i> info@example.com</p>
+              <p><i class="fa-solid fa-mobile-button fa-xl"></i> +1 5589 55488 55</p>
             </div>
-            <div class="detailform">
-                <form action="">
-                    <div class="textboxes">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject" required>
-                        <textarea type="text" rows="5" placeholder="Message" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </div>
-                </form>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
+          </div>
+
+          <div class="contact-form reveal">
+            <form action="">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+              <input type="text" placeholder="Subject" required>
+              <textarea rows="5" placeholder="Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
         </div>
-    </div>
-    </div>
-    </div>
-    <footer>
-        <p>© Copyright <b>Regna</b> All Rights Reserved</p>
-        <p>Designed by <a href="">BootstrapMade</a></p>
-    </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 RaHiL. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll-reveal: adds "is-visible" to .reveal / .reveal-stagger elements
+    // the first time they enter the viewport, then stops watching them.
+    (function () {
+      const targets = document.querySelectorAll('.reveal, .reveal-stagger');
+
+      // If the browser doesn't support it (very old), just show everything.
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach((el) => el.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.15,       // trigger once ~15% of the element is visible
+          rootMargin: '0px 0px -60px 0px' // reveal slightly before it hits the bottom edge
+        }
+      );
+
+      targets.forEach((el) => observer.observe(el));
+    })();
+  </script>
+
 </body>
 
 </html>
