@@ -816,7 +816,8 @@ footer a {
   }
 
   .menu li:hover > ul,
-  .menu li:focus-within > ul {
+  .menu li:focus-within > ul,
+  .menu li.is-open > ul {
     display: block;
   }
 
