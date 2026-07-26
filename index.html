@@ -16,7 +16,14 @@
 <body>
 
   <header class="navbar">
-    <div class="logo">REGNA</div>
+    <div class="nav-top">
+      <div class="logo">REGNA</div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
     <nav class="menu">
       <ul>
         <li class="active"><a href="#home">HOME</a></li>
@@ -348,6 +355,25 @@
 
       targets.forEach((el) => observer.observe(el));
     })();
+
+    const navbar = document.querySelector('.navbar');
+    const toggle = document.querySelector('.menu-toggle');
+
+    if (toggle && navbar) {
+      toggle.addEventListener('click', () => {
+        const isOpen = navbar.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navbar.querySelectorAll('.menu a').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            navbar.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }
   </script>
 
 </body>
