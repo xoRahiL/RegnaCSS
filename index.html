@@ -115,21 +115,21 @@
         <p class="section-subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
           doloremque</p>
 
-        <div class="facts-grid reveal-stagger">
+        <div class="facts-grid reveal-stagger" id="facts-section">
           <div class="fact-item">
-            <div class="fact-number">232</div>
+            <div class="fact-number" data-target="232">0</div>
             <div class="fact-label">Clients</div>
           </div>
           <div class="fact-item">
-            <div class="fact-number">534</div>
+            <div class="fact-number" data-target="534">0</div>
             <div class="fact-label">Projects</div>
           </div>
           <div class="fact-item">
-            <div class="fact-number">1463</div>
+            <div class="fact-number" data-target="1463">0</div>
             <div class="fact-label">Hours Of Support</div>
           </div>
           <div class="fact-item">
-            <div class="fact-number">42</div>
+            <div class="fact-number" data-target="42">0</div>
             <div class="fact-label">Hard Workers</div>
           </div>
         </div>
@@ -338,23 +338,74 @@
         return;
       }
 
+      let hasScrolled = false;
+      const markScrolled = () => {
+        hasScrolled = true;
+      };
+      window.addEventListener('scroll', markScrolled, { once: true });
+
       const observer = new IntersectionObserver(
         (entries, obs) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
+            const shouldRevealImmediately = entry.target.closest('#home');
+            const shouldReveal = shouldRevealImmediately || hasScrolled;
+
+            if (entry.isIntersecting && shouldReveal) {
               entry.target.classList.add('is-visible');
               obs.unobserve(entry.target);
             }
           });
         },
         {
-          threshold: 0.15,       // trigger once ~15% of the element is visible
-          rootMargin: '0px 0px -60px 0px' // reveal slightly before it hits the bottom edge
+          threshold: 0.25,
+          rootMargin: '0px 0px -10% 0px'
         }
       );
 
       targets.forEach((el) => observer.observe(el));
     })();
+
+    const factsSection = document.getElementById('facts-section');
+    const counters = document.querySelectorAll('.fact-number');
+
+    const animateCounters = () => {
+      counters.forEach((counter) => {
+        const target = Number(counter.dataset.target || 0);
+        const duration = 1400;
+        const startTime = performance.now();
+
+        const step = (currentTime) => {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.floor(target * eased);
+          counter.textContent = value.toLocaleString();
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            counter.textContent = target.toLocaleString();
+          }
+        };
+
+        requestAnimationFrame(step);
+      });
+    };
+
+    if (factsSection && counters.length) {
+      const factsObserver = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounters();
+              obs.disconnect();
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      factsObserver.observe(factsSection);
+    }
 
     const navbar = document.querySelector('.navbar');
     const toggle = document.querySelector('.menu-toggle');
