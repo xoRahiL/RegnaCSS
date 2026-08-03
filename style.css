@@ -17,6 +17,10 @@
   --container-width: 1200px;
   --section-padding-y: 90px;
   --nav-height: 70px;
+  --hero-title-size: clamp(2.2rem, 4vw, 3.4rem);
+  --hero-subtitle-size: clamp(1.1rem, 1.4vw, 1.45rem);
+  --section-title-size: clamp(1.8rem, 2.2vw, 2.4rem);
+  --section-subtitle-size: clamp(0.95rem, 1.1vw, 1.15rem);
 }
 
 * {
@@ -110,16 +114,20 @@ button {
 
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--section-title-size);
 }
 
 .section-subtitle {
   text-align: center;
   margin-top: 10px;
   color: var(--color-text-muted);
+  font-size: var(--section-subtitle-size);
 }
 
 .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 40px;
   min-width: 180px;
   height: 45px;
@@ -131,6 +139,8 @@ button {
   font-weight: bold;
   font-size: 15px;
   letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: pointer;
   transition: background-color var(--transition-med), color var(--transition-med),
     transform var(--transition-fast);
 }
@@ -710,6 +720,57 @@ footer a {
 /* ==========================================================================
    Responsive
    ========================================================================== */
+
+@media (min-width: 1800px) {
+  :root {
+    --container-width: 1400px;
+    --section-padding-y: 110px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  .navbar {
+    padding: 0 90px;
+  }
+
+  .hero {
+    min-height: 760px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3.2rem, 2.8rem + 1vw, 4.8rem);
+  }
+
+  .hero-content p {
+    font-size: clamp(1.35rem, 0.8rem + 0.7vw, 1.8rem);
+  }
+
+  .section-title {
+    font-size: clamp(2.2rem, 1.2rem + 0.8vw, 2.9rem);
+  }
+
+  .section-subtitle {
+    font-size: clamp(1.05rem, 0.3rem + 0.35vw, 1.25rem);
+  }
+
+  .about .container {
+    gap: 70px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+  }
+}
 
 @media (max-width: 900px) {
   .navbar {
